@@ -1,4 +1,4 @@
-import { Trophy, Star, Award, ExternalLink } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 import apacAward from "@/assets/apac-award.png";
 
 const AchievementsSection = () => {
