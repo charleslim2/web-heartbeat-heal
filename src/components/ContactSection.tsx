@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send, Clock } from "lucide-react";
 
 const ContactSection = () => {
@@ -15,142 +14,104 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-20 bg-background">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-16"
-        >
-          <span className="text-sm font-semibold text-secondary uppercase tracking-wider">
+        <div className="max-w-xl mb-12">
+          <span className="text-xs font-semibold text-secondary uppercase tracking-widest">
             Contact Us
           </span>
-          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground mt-3 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mt-2 mb-3">
             Get in Touch
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             Ready to discuss your project? Reach out to us for a free consultation and quote.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid lg:grid-cols-5 gap-10">
-          {/* Contact info */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="lg:col-span-2 space-y-6"
-          >
-            <div className="bg-card rounded-xl p-6 shadow-card space-y-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                  <MapPin className="h-5 w-5 text-accent-foreground" />
+        <div className="grid lg:grid-cols-5 gap-8">
+          <div className="lg:col-span-2">
+            <div className="bg-card rounded-lg p-5 border border-border space-y-5">
+              {[
+                { icon: MapPin, label: "Address", value: "23 Kian Teck Road #04-01\nSingapore 628774" },
+                { icon: Phone, label: "Phone", value: "+65 8810 1448", href: "tel:+6588101448" },
+                { icon: Mail, label: "Email", value: "info@oneresourceservices.com", href: "mailto:info@oneresourceservices.com" },
+                { icon: Clock, label: "Operating Hours", value: "Mon – Fri: 9:00 AM – 6:00 PM" },
+              ].map((item) => (
+                <div key={item.label} className="flex gap-3">
+                  <div className="w-9 h-9 rounded bg-accent flex items-center justify-center shrink-0">
+                    <item.icon className="h-4 w-4 text-accent-foreground" />
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-semibold text-xs text-foreground">{item.label}</h4>
+                    {item.href ? (
+                      <a href={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-sm text-muted-foreground whitespace-pre-line">{item.value}</p>
+                    )}
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-heading font-bold text-foreground text-sm">Address</h4>
-                  <p className="text-sm text-muted-foreground">23 Kian Teck Road #04-01<br />Singapore 628774</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                  <Phone className="h-5 w-5 text-accent-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-bold text-foreground text-sm">Phone</h4>
-                  <a href="tel:+6588101448" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    +65 8810 1448
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                  <Mail className="h-5 w-5 text-accent-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-bold text-foreground text-sm">Email</h4>
-                  <a href="mailto:info@oneresourceservices.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    info@oneresourceservices.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                  <Clock className="h-5 w-5 text-accent-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-bold text-foreground text-sm">Operating Hours</h4>
-                  <p className="text-sm text-muted-foreground">Mon – Fri: 9:00 AM – 6:00 PM</p>
-                </div>
-              </div>
+              ))}
             </div>
-          </motion.div>
+          </div>
 
-          {/* Contact form */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="lg:col-span-3"
-          >
-            <form onSubmit={handleSubmit} className="bg-card rounded-xl p-6 shadow-card space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
+          <div className="lg:col-span-3">
+            <form onSubmit={handleSubmit} className="bg-card rounded-lg p-5 border border-border space-y-3">
+              <div className="grid sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Name</label>
+                  <label className="block text-xs font-medium text-foreground mb-1">Name</label>
                   <input
                     type="text"
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
+                    className="w-full px-3 py-2.5 rounded bg-muted border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Email</label>
+                  <label className="block text-xs font-medium text-foreground mb-1">Email</label>
                   <input
                     type="email"
                     required
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
+                    className="w-full px-3 py-2.5 rounded bg-muted border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-1.5">Phone</label>
+                <label className="block text-xs font-medium text-foreground mb-1">Phone</label>
                 <input
                   type="tel"
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
+                  className="w-full px-3 py-2.5 rounded bg-muted border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="+65 XXXX XXXX"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-1.5">Message</label>
+                <label className="block text-xs font-medium text-foreground mb-1">Message</label>
                 <textarea
                   required
                   rows={4}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-shadow resize-none"
+                  className="w-full px-3 py-2.5 rounded bg-muted border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity text-sm"
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground font-semibold rounded hover:bg-secondary/90 transition-colors text-sm"
               >
                 Send Enquiry
                 <Send className="h-4 w-4" />
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
