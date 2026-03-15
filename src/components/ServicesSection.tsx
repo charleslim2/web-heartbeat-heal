@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import electricalImg from "@/assets/services-electrical.jpg";
 import securityImg from "@/assets/services-security.jpg";
 import maintenanceImg from "@/assets/services-maintenance.jpg";
@@ -30,66 +28,53 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 bg-muted">
+    <section id="services" className="py-20 bg-muted">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-16"
-        >
-          <span className="text-sm font-semibold text-secondary uppercase tracking-wider">
+        <div className="max-w-xl mb-12">
+          <span className="text-xs font-semibold text-secondary uppercase tracking-widest">
             Our Services
           </span>
-          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground mt-3 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mt-2 mb-3">
             Comprehensive M&E Solutions
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             From electrical installations to security systems and full building maintenance — 
             we deliver end-to-end facility services.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {services.map((service, i) => (
-            <motion.div
+        <div className="grid md:grid-cols-3 gap-5">
+          {services.map((service) => (
+            <div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
-              className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300"
+              className="bg-card rounded-lg overflow-hidden border border-border"
             >
-              <div className="relative h-52 overflow-hidden">
+              <div className="h-48 overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
               </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-heading text-xl font-bold text-foreground">
-                    {service.title}
-                  </h3>
-                  <ArrowUpRight className="h-5 w-5 text-secondary opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
+              <div className="p-5">
+                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
+                  {service.title}
+                </h3>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   {service.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {service.items.map((item) => (
                     <span
                       key={item}
-                      className="px-3 py-1 text-xs font-medium bg-accent text-accent-foreground rounded-full"
+                      className="px-2.5 py-1 text-xs font-medium bg-accent text-accent-foreground rounded"
                     >
                       {item}
                     </span>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,95 +1,64 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Shield, Zap } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background image */}
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img src={heroBg} alt="Facility management" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-hero opacity-85" />
+        <div className="absolute inset-0 bg-gradient-hero opacity-90" />
       </div>
 
       <div className="container relative z-10 py-20">
-        <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8"
-          >
-            <Shield className="h-4 w-4 text-secondary" />
-            <span className="text-sm font-medium text-primary-foreground/90">
+        <div className="max-w-2xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-primary-foreground/10 border border-primary-foreground/15 mb-6">
+            <Shield className="h-3.5 w-3.5 text-secondary" />
+            <span className="text-xs font-medium text-primary-foreground/80">
               BCA & Bizsafe 3 Registered
             </span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-[1.1] mb-6"
-          >
+          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-[1.15] mb-5">
             Integrated Facility &{" "}
             <span className="text-secondary">M&E Services</span>{" "}
             You Can Trust
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-primary-foreground/75 max-w-2xl mb-10 leading-relaxed"
-          >
+          <p className="text-base md:text-lg text-primary-foreground/70 max-w-xl mb-8 leading-relaxed">
             Delivering high-quality electrical, security systems, and building maintenance 
             solutions for residential, commercial, and industrial properties in Singapore.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="flex flex-wrap gap-4"
-          >
+          <div className="flex flex-wrap gap-3">
             <a
               href="#services"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity text-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-semibold rounded hover:bg-secondary/90 transition-colors text-sm"
             >
               Our Services
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground font-semibold rounded-lg border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-colors text-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground/10 text-primary-foreground font-medium rounded border border-primary-foreground/20 hover:bg-primary-foreground/15 transition-colors text-sm"
             >
               Contact Us
             </a>
-          </motion.div>
+          </div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="mt-16 grid grid-cols-3 gap-8 max-w-lg"
-          >
+          <div className="mt-12 flex gap-10">
             {[
               { value: "10+", label: "Years Experience" },
               { value: "500+", label: "Projects Completed" },
               { value: "100%", label: "Safety Record" },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="flex items-center gap-1">
-                  <Zap className="h-4 w-4 text-secondary" />
-                  <span className="font-heading text-2xl font-extrabold text-primary-foreground">
-                    {stat.value}
-                  </span>
-                </div>
-                <span className="text-xs text-primary-foreground/60">{stat.label}</span>
+                <span className="font-heading text-2xl font-bold text-primary-foreground">
+                  {stat.value}
+                </span>
+                <span className="block text-xs text-primary-foreground/50 mt-0.5">{stat.label}</span>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
