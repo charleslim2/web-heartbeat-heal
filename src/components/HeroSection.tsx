@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import keppelLogo from "@/assets/clients/keppel-logo.png";
 import dukenusLogo from "@/assets/clients/dukenus-logo.png";
+import heroBg from "@/assets/hero-bg.jpg";
 
 interface Client {
   name: string;
