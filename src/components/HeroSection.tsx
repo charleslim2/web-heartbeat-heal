@@ -1,25 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import dataCentreBg from "@/assets/data-centre-bg.jpg";
-import keppelLogo from "@/assets/clients/keppel-logistics.webp";
+import keppelLogo from "@/assets/clients/keppel-color.jpg";
+import dukenusLogo from "@/assets/clients/dukenus-logo.png";
 
 interface Client {
   name: string;
-  logo?: string;
+  logo: string;
 }
 
 const clients: Client[] = [
   { name: "Keppel Logistics", logo: keppelLogo },
-  { name: "Duke-NUS Medical School" },
-  { name: "MINDS Singapore" },
-  { name: "NEU Industries" },
-  { name: "Speedy-Tech Electronics" },
-  { name: "Tuas Checkpoint" },
-  { name: "Clementi Arcade" },
-  { name: "Cecil Court" },
-  { name: "Woodgrove Condominium" },
-  { name: "Kembangan Plaza" },
-  { name: "Dormer Park" },
-  { name: "Sidang II Condominium" },
+  { name: "Duke-NUS Medical School", logo: dukenusLogo },
 ];
 
 const HeroSection = () => {
@@ -93,18 +84,12 @@ const HeroSection = () => {
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-black/60 to-transparent z-10" />
 
           <div className="flex animate-marquee">
-            {[...clients, ...clients].map((client, i) => (
+            {[...clients, ...clients, ...clients, ...clients].map((client, i) => (
               <div
                 key={`${client.name}-${i}`}
-                className="flex-shrink-0 mx-4 flex items-center justify-center h-12 px-6 bg-white/10 border border-white/15 rounded backdrop-blur-sm"
+                className="flex-shrink-0 mx-6 flex items-center justify-center h-14 px-8 bg-white/10 border border-white/15 rounded backdrop-blur-sm"
               >
-                {client.logo ? (
-                  <img src={client.logo} alt={client.name} className="h-7 w-auto object-contain brightness-0 invert opacity-80" />
-                ) : (
-                  <span className="font-heading text-xs font-semibold text-white/80 whitespace-nowrap">
-                    {client.name}
-                  </span>
-                )}
+                <img src={client.logo} alt={client.name} className="h-9 w-auto object-contain brightness-0 invert opacity-90" />
               </div>
             ))}
           </div>
