@@ -87,9 +87,9 @@ const HeroSection = () => {
             {[...clients, ...clients, ...clients, ...clients].map((client, i) => (
               <div
                 key={`${client.name}-${i}`}
-                className="flex-shrink-0 mx-6 flex items-center justify-center h-14 px-8 bg-white/10 border border-white/15 rounded backdrop-blur-sm"
+                className="flex-shrink-0 mx-6 flex items-center justify-center h-14 px-8 bg-white/90 border border-white/20 rounded backdrop-blur-sm"
               >
-                <img src={client.logo} alt={client.name} className="h-9 w-auto object-contain brightness-0 invert opacity-90" />
+                <img src={client.logo} alt={client.name} className="h-9 w-auto object-contain" />
               </div>
             ))}
           </div>
