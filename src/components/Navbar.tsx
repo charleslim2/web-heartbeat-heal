@@ -22,19 +22,6 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-primary hidden md:block">
-        <div className="container flex items-center justify-end gap-6 py-1.5 text-xs text-primary-foreground/70">
-          <span className="flex items-center gap-1.5">
-            <MapPin className="h-3 w-3" />
-            23 Kian Teck Road #04-01, Singapore 628774
-          </span>
-          <a href="tel:+6588101448" className="flex items-center gap-1.5 hover:text-primary-foreground transition-colors">
-            <Phone className="h-3 w-3" />
-            +65 8810 1448
-          </a>
-        </div>
-      </div>
-
       <nav
         className={`sticky top-0 z-50 transition-all duration-200 border-b ${
           scrolled ? "bg-card/95 backdrop-blur-sm border-border" : "bg-card border-transparent"
