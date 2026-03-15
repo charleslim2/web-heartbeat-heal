@@ -9,8 +9,8 @@ interface Client {
 }
 
 const clients: Client[] = [
-  { name: "Keppel Logistics", logo: keppelLogo, className: "h-14" },
-  { name: "Duke-NUS Medical School", logo: dukenusLogo, className: "h-14" },
+  { name: "Keppel Logistics", logo: keppelLogo, className: "h-[3.15rem]" },
+  { name: "Duke-NUS Medical School", logo: dukenusLogo, className: "h-[3.15rem]" },
 ];
 
 const HeroSection = () => {
