@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, MapPin } from "lucide-react";
+import orsLogo from "@/assets/ors-logo.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
