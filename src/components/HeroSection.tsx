@@ -1,4 +1,4 @@
-import { ArrowRight, Shield } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import keppelLogo from "@/assets/clients/keppel-logistics.webp";
 
@@ -27,13 +27,6 @@ const HeroSection = () => {
     <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-background">
       <div className="container relative z-10 py-20">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-muted border border-border mb-6">
-            <Shield className="h-3.5 w-3.5 text-secondary" />
-            <span className="text-xs font-medium text-muted-foreground">
-              BCA & Bizsafe 3 Registered
-            </span>
-          </div>
-
           <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-[1.15] mb-5">
             Integrated Facility &{" "}
             <span className="text-secondary">M&E Services</span>{" "}
