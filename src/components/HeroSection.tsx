@@ -1,9 +1,30 @@
 import { ArrowRight, Shield } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import keppelLogo from "@/assets/clients/keppel-logistics.webp";
+
+interface Client {
+  name: string;
+  logo?: string;
+}
+
+const clients: Client[] = [
+  { name: "Keppel Logistics", logo: keppelLogo },
+  { name: "Duke-NUS Medical School" },
+  { name: "MINDS Singapore" },
+  { name: "NEU Industries" },
+  { name: "Speedy-Tech Electronics" },
+  { name: "Tuas Checkpoint" },
+  { name: "Clementi Arcade" },
+  { name: "Cecil Court" },
+  { name: "Woodgrove Condominium" },
+  { name: "Kembangan Plaza" },
+  { name: "Dormer Park" },
+  { name: "Sidang II Condominium" },
+];
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img src={heroBg} alt="Facility management" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-hero opacity-90" />
@@ -56,6 +77,36 @@ const HeroSection = () => {
                   {stat.value}
                 </span>
                 <span className="block text-xs text-primary-foreground/50 mt-0.5">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Clients marquee below stats */}
+      <div className="relative z-10 mt-auto pb-8">
+        <div className="container mb-4">
+          <span className="text-xs font-medium text-primary-foreground/40 uppercase tracking-widest">
+            Trusted by
+          </span>
+        </div>
+        <div className="relative overflow-hidden">
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-primary/90 to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-primary/90 to-transparent z-10" />
+
+          <div className="flex animate-marquee">
+            {[...clients, ...clients].map((client, i) => (
+              <div
+                key={`${client.name}-${i}`}
+                className="flex-shrink-0 mx-4 flex items-center justify-center h-12 px-6 bg-primary-foreground/5 border border-primary-foreground/10 rounded"
+              >
+                {client.logo ? (
+                  <img src={client.logo} alt={client.name} className="h-7 w-auto object-contain brightness-0 invert opacity-70" />
+                ) : (
+                  <span className="font-heading text-xs font-semibold text-primary-foreground/50 whitespace-nowrap">
+                    {client.name}
+                  </span>
+                )}
               </div>
             ))}
           </div>
