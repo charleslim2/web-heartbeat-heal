@@ -73,7 +73,7 @@ const HeroSection = () => {
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
 
-          <div className="flex animate-marquee will-change-transform">
+          <div className="flex w-max flex-nowrap animate-marquee will-change-transform transform-gpu">
             {[...clients, ...clients, ...clients, ...clients].map((client, i) => (
               <div
                 key={`${client.name}-${i}`}
