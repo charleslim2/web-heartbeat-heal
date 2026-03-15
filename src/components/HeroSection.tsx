@@ -61,7 +61,7 @@ const HeroSection = () => {
             </a>
           </div>
 
-          <div className="mt-8 flex gap-10">
+          <div className="mt-6 flex gap-10">
             {[
               { value: "10+", label: "Years Experience" },
               { value: "500+", label: "Projects Completed" },
@@ -79,7 +79,7 @@ const HeroSection = () => {
       </div>
 
       {/* Clients marquee below stats */}
-      <div className="relative z-10 pb-8 pt-6">
+      <div className="relative z-10 pb-8 pt-2">
         <div className="container mb-6 text-center">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             Trusted by
