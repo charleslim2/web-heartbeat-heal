@@ -86,7 +86,7 @@ const HeroSection = () => {
       {/* Clients marquee below stats */}
       <div className="relative z-10 mt-auto pb-8">
         <div className="container mb-4">
-          <span className="text-xs font-medium text-primary-foreground/40 uppercase tracking-widest">
+          <span className="text-sm font-semibold text-primary-foreground uppercase tracking-widest">
             Trusted by
           </span>
         </div>
