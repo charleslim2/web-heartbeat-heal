@@ -1,16 +1,23 @@
-const clients = [
-  "Keppel Logistics",
-  "Duke-NUS Medical School",
-  "MINDS Singapore",
-  "NEU Industries",
-  "Speedy-Tech Electronics",
-  "Tuas Checkpoint",
-  "Clementi Arcade",
-  "Cecil Court",
-  "Woodgrove Condominium",
-  "Kembangan Plaza",
-  "Dormer Park",
-  "Sidang II Condominium",
+import keppelLogo from "@/assets/clients/keppel-logistics.webp";
+
+interface Client {
+  name: string;
+  logo?: string;
+}
+
+const clients: Client[] = [
+  { name: "Keppel Logistics", logo: keppelLogo },
+  { name: "Duke-NUS Medical School" },
+  { name: "MINDS Singapore" },
+  { name: "NEU Industries" },
+  { name: "Speedy-Tech Electronics" },
+  { name: "Tuas Checkpoint" },
+  { name: "Clementi Arcade" },
+  { name: "Cecil Court" },
+  { name: "Woodgrove Condominium" },
+  { name: "Kembangan Plaza" },
+  { name: "Dormer Park" },
+  { name: "Sidang II Condominium" },
 ];
 
 const ClientsSection = () => {
@@ -26,19 +33,22 @@ const ClientsSection = () => {
       </div>
 
       <div className="relative">
-        {/* Fade edges */}
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-muted to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-muted to-transparent z-10" />
 
         <div className="flex animate-marquee">
           {[...clients, ...clients].map((client, i) => (
             <div
-              key={`${client}-${i}`}
+              key={`${client.name}-${i}`}
               className="flex-shrink-0 mx-6 flex items-center justify-center h-16 px-8 bg-card border border-border rounded"
             >
-              <span className="font-heading text-sm font-semibold text-foreground/70 whitespace-nowrap">
-                {client}
-              </span>
+              {client.logo ? (
+                <img src={client.logo} alt={client.name} className="h-10 w-auto object-contain" />
+              ) : (
+                <span className="font-heading text-sm font-semibold text-foreground/70 whitespace-nowrap">
+                  {client.name}
+                </span>
+              )}
             </div>
           ))}
         </div>
