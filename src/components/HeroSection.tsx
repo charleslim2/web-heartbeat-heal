@@ -1,4 +1,4 @@
-import { ArrowRight, Shield } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import keppelLogo from "@/assets/clients/keppel-logistics.webp";
 
