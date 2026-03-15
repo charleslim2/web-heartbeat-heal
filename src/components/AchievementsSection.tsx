@@ -1,4 +1,4 @@
-import { Trophy, Star, Award, ExternalLink } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 import apacAward from "@/assets/apac-award.png";
 
 const AchievementsSection = () => {
@@ -50,30 +50,6 @@ const AchievementsSection = () => {
           </div>
         </div>
 
-        {/* Certifications grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { title: "BCA Registered", desc: "ME 05 Electrical Licensed Contractor" },
-            { title: "Bizsafe 3", desc: "Workplace Safety & Health Certified" },
-            { title: "Trusted Partner", desc: "Long-term contracts with major clients" },
-            { title: "Zero Incidents", desc: "Exemplary safety track record" },
-          ].map((a, i) => (
-            <div
-              key={a.title}
-              className="bg-card rounded-lg p-5 border border-border text-center"
-            >
-              <div className="w-11 h-11 rounded bg-accent flex items-center justify-center mx-auto mb-3">
-                {i % 2 === 0 ? (
-                  <Trophy className="h-5 w-5 text-secondary" />
-                ) : (
-                  <Star className="h-5 w-5 text-secondary" />
-                )}
-              </div>
-              <h3 className="font-heading font-semibold text-sm text-foreground mb-0.5">{a.title}</h3>
-              <p className="text-xs text-muted-foreground">{a.desc}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
