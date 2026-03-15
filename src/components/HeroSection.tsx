@@ -16,21 +16,28 @@ const clients: Client[] = [
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-background">
-      <div className="container relative z-10 py-12">
-        <div className="max-w-2xl">
+    <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      <div className="absolute inset-0 bg-background/85" />
+
+      <div className="container relative z-10 py-16">
+        <div className="max-w-2xl mx-auto text-center">
           <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-[1.15] mb-5">
             Integrated Facility &{" "}
             <span className="text-secondary">M&E Services</span>{" "}
             You Can Trust
           </h1>
 
-          <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
+          <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-8 leading-relaxed">
             Delivering high-quality electrical, security systems, and building maintenance 
             solutions for residential, commercial, and industrial properties in Singapore.
           </p>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             <a
               href="#services"
               className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-semibold rounded hover:bg-secondary/90 transition-colors text-sm"
@@ -46,7 +53,7 @@ const HeroSection = () => {
             </a>
           </div>
 
-          <div className="mt-6 flex gap-10">
+          <div className="mt-6 flex justify-center gap-10">
             {[
               { value: "10+", label: "Years Experience" },
               { value: "500+", label: "Projects Completed" },
