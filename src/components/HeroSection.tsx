@@ -88,7 +88,7 @@ const HeroSection = () => {
         <div className="container mb-4">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
             Trusted by
-          </span>
+          </h2>
         </div>
         <div className="relative overflow-hidden">
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-primary/90 to-transparent z-10" />
