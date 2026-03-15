@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, MapPin } from "lucide-react";
+import orsLogo from "@/assets/ors-logo.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -41,7 +42,7 @@ const Navbar = () => {
       >
         <div className="container flex items-center justify-between py-3">
           <a href="#" className="flex items-center gap-2.5">
-            <span className="font-heading text-xl font-bold text-primary">ORS</span>
+            <img src={orsLogo} alt="One Resource Services" className="h-10 w-auto" />
             <div className="hidden sm:block border-l border-border pl-2.5">
               <span className="text-xs font-medium text-muted-foreground leading-tight block">
                 One Resource Services
