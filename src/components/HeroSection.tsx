@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import keppelLogo from "@/assets/clients/keppel-logo.png";
 import dukenusLogo from "@/assets/clients/dukenus-logo.png";
+import newClientLogo from "@/assets/clients/new-client-logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 interface Client {
@@ -12,6 +13,7 @@ interface Client {
 const clients: Client[] = [
   { name: "Keppel Logistics", logo: keppelLogo, className: "h-[3.15rem]" },
   { name: "Duke-NUS Medical School", logo: dukenusLogo, className: "h-[3.15rem]" },
+  { name: "New Client", logo: newClientLogo, className: "h-[3.15rem]" },
 ];
 
 const HeroSection = () => {
