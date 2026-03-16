@@ -1,4 +1,5 @@
 import electricalImg from "@/assets/services-electrical.jpg";
+import hvlsFanImg from "@/assets/services-hvls-fan.jpg";
 import securityImg from "@/assets/services-security.jpg";
 import maintenanceImg from "@/assets/services-maintenance.jpg";
 
