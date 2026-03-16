@@ -1,4 +1,5 @@
 import electricalImg from "@/assets/services-electrical.jpg";
+import hvlsFanImg from "@/assets/services-hvls-fan.jpg";
 import securityImg from "@/assets/services-security.jpg";
 import maintenanceImg from "@/assets/services-maintenance.jpg";
 
@@ -11,7 +12,7 @@ const services = [
     items: ["DB Replacement", "Cable Tray & Trunking", "Lighting & Power Works", "System Upgrades", "Lightning Protection"],
   },
   {
-    image: securityImg,
+    image: hvlsFanImg,
     title: "HVLS Fan Installation",
     description:
       "Supply, installation, and commissioning of HVLS (High Volume Low Speed) fans for warehouses, factories, and large commercial spaces — improving airflow and reducing energy costs.",
