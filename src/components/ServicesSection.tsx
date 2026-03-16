@@ -5,24 +5,31 @@ import maintenanceImg from "@/assets/services-maintenance.jpg";
 const services = [
   {
     image: electricalImg,
-    title: "Electrical Works",
+    title: "Electrical Engineering",
     description:
-      "Complete electrical installations, maintenance, and repairs for residential, commercial, and industrial properties. BCA ME05 licensed.",
-    items: ["Power Distribution", "Lighting Systems", "DB Board Installation", "Electrical Testing"],
+      "Complete electrical engineering services covering DB replacement, cable tray and trunking, lighting and power works, and system upgrades across residential, commercial, and industrial sectors. BCA ME05 licensed.",
+    items: ["DB Replacement", "Cable Tray & Trunking", "Lighting & Power Works", "System Upgrades", "Lightning Protection"],
   },
   {
     image: securityImg,
-    title: "Security Systems",
+    title: "HVLS Fan Installation",
     description:
-      "Comprehensive CCTV surveillance and door access system solutions to keep your property protected and monitored 24/7.",
-    items: ["CCTV Installation", "Door Access Systems", "Intercom Systems", "Remote Monitoring"],
+      "Supply, installation, and commissioning of HVLS (High Volume Low Speed) fans for warehouses, factories, and large commercial spaces — improving airflow and reducing energy costs.",
+    items: ["Cabling & Trunking", "Fan Motor Installation", "Warehouses & Factories", "Commercial Spaces"],
+  },
+  {
+    image: securityImg,
+    title: "Security & CCTV Systems",
+    description:
+      "Supply, installation, and commissioning of security access control systems and CCTV surveillance solutions for residential, commercial, and industrial facilities.",
+    items: ["CCTV Installation", "Door Access Systems", "Intercom Systems", "Maintenance Contracts"],
   },
   {
     image: maintenanceImg,
-    title: "Building Maintenance",
+    title: "Other Services",
     description:
-      "Full-spectrum building maintenance including painting, air conditioning servicing, fire safety management, and more.",
-    items: ["Painting Works", "Air Con Servicing", "Fire Safety", "General Maintenance"],
+      "Full-spectrum building maintenance and facility management services to prolong asset life and reduce unnecessary costs.",
+    items: ["Air Con Systems", "Facilities Maintenance", "Fire Safety Manager", "General Builder Works", "Security Safety Audit"],
   },
 ];
 
@@ -38,12 +45,12 @@ const ServicesSection = () => {
             Comprehensive M&E Solutions
           </h2>
           <p className="text-sm text-muted-foreground">
-            From electrical installations to security systems and full building maintenance — 
+            From electrical installations to security systems, HVLS fans, and full building maintenance — 
             we deliver end-to-end facility services.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           {services.map((service) => (
             <div
               key={service.title}

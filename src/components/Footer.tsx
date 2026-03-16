@@ -49,7 +49,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-8 pt-5 text-center">
           <p className="text-[11px] text-primary-foreground/30">
-            © {new Date().getFullYear()} One Resource Services Pte Ltd. All rights reserved.
+            © {new Date().getFullYear()} One Resource Services Pte Ltd. All rights reserved. | Company Reg. No: 201531494H
           </p>
         </div>
       </div>
