@@ -33,7 +33,7 @@ const ContactSection = () => {
             <div className="bg-card rounded-lg p-5 border border-border space-y-5">
               {[
                 { icon: MapPin, label: "Address", value: "23 Kian Teck Road #04-01\nSingapore 628774" },
-                { icon: Phone, label: "Phone", value: "+65 8810 1448", href: "tel:+6588101448" },
+                { icon: Phone, label: "Phone", value: "+65 8127 1948", href: "tel:+6581271948" },
                 { icon: Mail, label: "Email", value: "info@oneresourceservices.com", href: "mailto:info@oneresourceservices.com" },
                 { icon: Clock, label: "Operating Hours", value: "Mon – Fri: 9:00 AM – 6:00 PM" },
               ].map((item) => (
