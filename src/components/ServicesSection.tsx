@@ -15,7 +15,7 @@ const services = [
     image: hvlsFanImg,
     title: "HVLS Fan Installation",
     description:
-      "Supply, installation, and commissioning of HVLS (High Volume Low Speed) fans for warehouses, factories, and large commercial spaces — improving airflow and reducing energy costs.",
+      "Supply, installation, and commissioning of HVLS (High Volume Low Speed) fans for warehouses, factories, and large commercial spaces, improving airflow and reducing energy costs.",
     items: ["Cabling & Trunking", "Fan Motor Installation", "Warehouses & Factories", "Commercial Spaces"],
   },
   {
