@@ -35,9 +35,9 @@ const Footer = () => {
                 <MapPin className="h-3.5 w-3.5 mt-0.5 shrink-0" />
                 23 Kian Teck Road #04-01, Singapore 628774
               </p>
-              <a href="tel:+6588101448" className="flex items-center gap-2 text-xs text-primary-foreground/50 hover:text-primary-foreground transition-colors">
+              <a href="tel:+6581271948" className="flex items-center gap-2 text-xs text-primary-foreground/50 hover:text-primary-foreground transition-colors">
                 <Phone className="h-3.5 w-3.5" />
-                +65 8810 1448
+                +65 8127 1948
               </a>
               <a href="mailto:info@oneresourceservices.com" className="flex items-center gap-2 text-xs text-primary-foreground/50 hover:text-primary-foreground transition-colors">
                 <Mail className="h-3.5 w-3.5" />
