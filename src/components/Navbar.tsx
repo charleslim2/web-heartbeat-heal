@@ -34,7 +34,7 @@ const Navbar = () => {
               <span className="text-xs font-medium text-muted-foreground leading-tight block">
                 One Resource Services
               </span>
-              <span className="text-[10px] text-muted-foreground/60">Pte Ltd</span>
+              <span className="text-[10px] text-muted-foreground/60">Reliable, Responsible, Responsive, Resourceful</span>
             </div>
           </a>
 
