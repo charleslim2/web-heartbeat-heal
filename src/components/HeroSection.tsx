@@ -58,7 +58,7 @@ const HeroSection = () => {
           <div className="mt-6 flex justify-center gap-10">
             {[
               { value: "10+", label: "Years Experience" },
-              { value: "500+", label: "Projects Completed" },
+              { value: "200+", label: "Projects Completed" },
               { value: "100%", label: "Safety Record" },
             ].map((stat) => (
               <div key={stat.label}>
