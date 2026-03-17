@@ -63,6 +63,7 @@ const ServicesSection = () => {
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover"
+                  style={service.objectPosition ? { objectPosition: service.objectPosition } : undefined}
                 />
               </div>
               <div className="p-5">
