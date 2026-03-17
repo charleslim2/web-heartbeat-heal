@@ -2,6 +2,9 @@ import { ArrowRight } from "lucide-react";
 import keppelLogo from "@/assets/clients/keppel-logo.png";
 import dukenusLogo from "@/assets/clients/dukenus-logo.png";
 import newClientLogo from "@/assets/clients/new-client-logo.png";
+import winevaultLogo from "@/assets/clients/winevault-logo.png";
+import cwtLogo from "@/assets/clients/cwt-logo.png";
+import geodisLogo from "@/assets/clients/geodis-logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 interface Client {
@@ -14,6 +17,9 @@ const clients: Client[] = [
   { name: "Keppel Logistics", logo: keppelLogo, className: "h-[3.15rem]" },
   { name: "Duke-NUS Medical School", logo: dukenusLogo, className: "h-[3.15rem]" },
   { name: "New Client", logo: newClientLogo, className: "h-[4rem]" },
+  { name: "Singapore WineVault", logo: winevaultLogo, className: "h-[3.15rem]" },
+  { name: "CWT", logo: cwtLogo, className: "h-[3.15rem]" },
+  { name: "Geodis", logo: geodisLogo, className: "h-[3.15rem]" },
 ];
 
 const HeroSection = () => {
