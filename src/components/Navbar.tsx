@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="container flex items-center justify-between py-3">
           <a href="#" className="flex items-center gap-2.5">
             <img src={orsLogo} alt="One Resource Services" className="h-10 w-auto" />
-            <div className="hidden sm:block border-l border-border pl-2.5">
+            <div className="border-l border-border pl-2.5">
               <span className="text-xs font-medium text-muted-foreground leading-tight block">
                 One Resource Services
               </span>
