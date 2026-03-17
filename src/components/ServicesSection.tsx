@@ -10,6 +10,7 @@ const services = [
     description:
       "Complete electrical engineering services covering DB replacement, cable tray and trunking, lighting and power works, and system upgrades across residential, commercial, and industrial sectors. BCA ME05 Registered Contractor.",
     items: ["DB Replacement", "Cable Tray & Trunking", "Lighting & Power Works", "System Upgrades", "Lightning Protection"],
+    objectPosition: "center 30%",
   },
   {
     image: hvlsFanImg,
@@ -62,6 +63,7 @@ const ServicesSection = () => {
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover"
+                  style={service.objectPosition ? { objectPosition: service.objectPosition } : undefined}
                 />
               </div>
               <div className="p-5">
