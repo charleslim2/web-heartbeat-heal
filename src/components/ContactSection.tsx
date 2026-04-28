@@ -41,6 +41,16 @@ const ContactSection = () => {
               </div>
             ))}
           </div>
+          <div className="mt-6 flex justify-center">
+            <a
+              href="https://wa.me/6581271948?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 min-w-[160px] h-12 px-6 bg-secondary text-secondary-foreground font-semibold rounded hover:bg-secondary/90 transition-colors text-sm"
+            >
+              Get a Quote
+            </a>
+          </div>
         </div>
       </div>
     </section>
