@@ -49,7 +49,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://api.whatsapp.com/send?phone=6581271948"
+              href="https://wa.me/6581271948"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-3 px-4 py-2 text-sm font-semibold bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors"
@@ -81,7 +81,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="https://api.whatsapp.com/send?phone=6581271948"
+                href="https://wa.me/6581271948"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
