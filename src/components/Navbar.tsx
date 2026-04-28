@@ -49,7 +49,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://wa.me/6581271948"
+              href="https://wa.me/6581271948?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote."
               target="_blank"
               rel="noopener noreferrer"
               className="ml-3 px-4 py-2 text-sm font-semibold bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors"
@@ -81,7 +81,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="https://wa.me/6581271948"
+                href="https://wa.me/6581271948?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
