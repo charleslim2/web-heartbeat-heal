@@ -46,14 +46,14 @@ const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-3">
             <a
               href="#services"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-semibold rounded hover:bg-secondary/90 transition-colors text-sm"
+              className="inline-flex items-center justify-center gap-2 min-w-[160px] h-12 px-6 bg-secondary text-secondary-foreground font-semibold rounded hover:bg-secondary/90 transition-colors text-sm"
             >
               Our Services
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-background text-foreground font-medium rounded border border-border hover:bg-muted transition-colors text-sm"
+              className="inline-flex items-center justify-center gap-2 min-w-[160px] h-12 px-6 bg-background text-foreground font-semibold rounded border border-border hover:bg-muted transition-colors text-sm"
             >
               Contact Us
             </a>
