@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://web-heartbeat-heal.lovable.app/sitemap.xml
